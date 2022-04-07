@@ -1,12 +1,11 @@
-const { errorMonitor } = require("events");
 
 class Calculator {
-  add(){}
-  subtract(){}
-  divide(){}
-  multiply(){}
+  add = (a, b) => a + b;
+  subtract = (a, b) => a - b;
+  divide = (a, b) => a / b;
+  multiply = (a, b) => a * b;
 }
-const calc = new Calculator();
+const calculator = new Calculator();
 
 module.exports = {
   stringLength: (string) => {
@@ -18,6 +17,6 @@ module.exports = {
     return string.length;
   },
   reverseString: (string) => string.split('').reverse().join(''),
-  calc: calc,
-  capitalize: (string) => {}
+  calculator: calculator,
+  capitalize: (string) => string[0].toUpperCase() + string.slice(1)
 }
