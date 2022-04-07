@@ -4,14 +4,10 @@ class Calculator {
   divide(){}
   multiply(){}
 }
-
 const calc = new Calculator();
 
 module.exports = {
-  sum: function(a, b) {
-    return a + b;
-  },
-  stringLength: function(string) {},
+  stringLength: (string) => string.length,
   reverseString: function(string) {},
   calc: calc,
   capitalize: function(string) {}
